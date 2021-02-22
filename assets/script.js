@@ -16,7 +16,12 @@ var numeral = '0123456789'
 var specialChar = '!\"#$%\&\'\(\)*+,-./:;<=>?@[\\]^_\`{|}~'
 
 function generatePassword() {
-  var selectLength = Number (window.prompt('Select the length of your password. (8 to 128 characters)'));
+  var selectLength = Number(window.prompt('Select the length of your password. (8 to 128 characters)'));
+  console.log(selectLength)
+
+  if (selectLength === 0) {
+    return null
+  }
 
   if (isNaN(selectLength) || selectLength < 8 || selectLength > 128) {
     alert("Password must be between 8 and 128 charactters.");
