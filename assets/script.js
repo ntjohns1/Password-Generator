@@ -66,7 +66,7 @@ function generatePassword() {
     return null
   }
   
-  // Loops through our long, concatenated string of available characters, grabbing a randomly indexed character from the string based on the length of the password the user selected.
+  // A loop that selects a randomly indexed character from our long string, the number of times this process repeats depends on the number of characters the user chooses. 
   var password = ""
   
   for (var i = 0; i < selectLength; i++) {
